@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Stock</string>
+    <string name="edit_message">Enter a stock code</string>
+    <string name="button_send">Send</string>
+</resources>
