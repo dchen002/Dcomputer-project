@@ -11,7 +11,7 @@ import com.dajustock.stockchart.ChartSearch;
 import com.dajustock.stockchart.R;
 
 
-public class mainpage extends AppCompatActivity {
+public class Mainpage extends AppCompatActivity {
     //Declare the required buttons.
     private Button search;
     private Button news;
@@ -43,14 +43,14 @@ public class mainpage extends AppCompatActivity {
             Intent intent = null;
             switch (v.getId()){
                 case R.id.bt_main_2:
-                    intent = new Intent(mainpage.this, ChartSearch.class);
+                    intent = new Intent(Mainpage.this, ChartSearch.class);
                     break;
                 case R.id.bt_main_3:
-                    intent = new Intent(mainpage.this,news.class);
+                    intent = new Intent(Mainpage.this, News.class);
                     break;
 
                 case R.id.bt_image:
-                    intent = new Intent(mainpage.this, MainActivity3.class);
+                    intent = new Intent(Mainpage.this, StockNeedToPredict.class);
                     break;
             }
             startActivity(intent);

@@ -8,7 +8,7 @@ import android.webkit.WebViewClient;
 
 import com.dajustock.stockchart.R;
 
-public class news extends Activity {
+public class News extends Activity {
 
     private WebView mWebView;
 

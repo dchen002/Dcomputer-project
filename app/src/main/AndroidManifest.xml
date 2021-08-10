@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DisplayChart"></activity>
-        <activity android:name="com.dajustock.DisplayMessageActivity" />
-        <activity android:name="com.dajustock.MainActivity3" />
-        <activity android:name="com.dajustock.news" />
+        <activity android:name="com.dajustock.DisplayPredictionValue" />
+        <activity android:name="com.dajustock.StockNeedToPredict" />
+        <activity android:name="com.dajustock.News" />
         <activity android:name=".ChartSearch" />
-        <activity android:name="com.dajustock.MainActivity2"/>
+        <activity android:name="com.dajustock.Login"/>
 
-        <activity android:name="com.dajustock.mainpage" >
+        <activity android:name="com.dajustock.Mainpage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

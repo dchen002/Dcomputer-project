@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.dajustock.stockchart.R;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity implements View.OnClickListener {
     //declare buttons need to use in this page
     private Button mybutlogin;
     private EditText mETUser;
@@ -20,7 +20,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_login);
 
         //find buttons in xml files by using findViewById.
         mybutlogin  = findViewById(R.id.btn_login);
@@ -44,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
             Toast.makeText(getApplicationContext(),ok,Toast.LENGTH_SHORT).show();
             //if username and password are incorrect go to main page
-            intent = new Intent(MainActivity2.this, mainpage.class);
+            intent = new Intent(Login.this, Mainpage.class);
             startActivity(intent);
 
         }else{

@@ -10,12 +10,12 @@ import android.widget.EditText;
 
 import com.dajustock.stockchart.R;
 
-public class MainActivity3 extends AppCompatActivity {
+public class StockNeedToPredict extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.dajustock.stockchart.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_stock_need_predict);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
@@ -23,7 +23,7 @@ public class MainActivity3 extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         // Click on the button to switch to the display screen.
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, DisplayPredictionValue.class);
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
         //Get the content of the input box.
         String message = editText.getText().toString();
