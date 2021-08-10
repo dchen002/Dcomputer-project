@@ -23,7 +23,9 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         // Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView5);
+        //The historical data obtained is used to make predictions using the knn algorithm.
         try {
+            //Display forecast results
             textView.setText(predictMachine.predict(message));
         } catch (KNNException e) {
             e.printStackTrace();

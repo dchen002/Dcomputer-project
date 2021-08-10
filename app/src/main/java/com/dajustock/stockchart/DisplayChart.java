@@ -30,6 +30,7 @@ import yahoofinance.histquotes.HistoricalQuote;
 import yahoofinance.histquotes.Interval;
 
 public class DisplayChart extends AppCompatActivity {
+
     List<BigDecimal> historicalQuotes = new ArrayList<>();
     private com.github.mikephil.charting.charts.LineChart lineChart;
     List<Float> yValueList = new ArrayList<>();
@@ -54,7 +55,7 @@ public class DisplayChart extends AppCompatActivity {
     private void initLineChart(){
         lineChart.animateXY(2000, 2000);
         Description description = new Description();
-        description.setText(""); //自定义描述
+        description.setText("");
         lineChart.setDescription(description);
         Legend legend = lineChart.getLegend();
         legend.setTextColor(Color.WHITE);

@@ -12,8 +12,7 @@ import com.dajustock.stockchart.R;
 
 
 public class mainpage extends AppCompatActivity {
-    //声明控件
-
+    //Declare the required buttons.
     private Button search;
     private Button news;
     private Button pre;
@@ -22,8 +21,7 @@ public class mainpage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
 
-        //找到控件
-
+        //Find the corresponding button in the xml file by findViewById.
         search = findViewById(R.id.bt_main_2);
         news = findViewById(R.id.bt_main_3);
         pre = findViewById(R.id.bt_image);
@@ -32,15 +30,14 @@ public class mainpage extends AppCompatActivity {
 
     private void setListener(){
         OnClick onClick = new OnClick();
-        //对每个按钮setOnclikListener
-
+        //set click listeners on the button object in the corresponding activity
         search.setOnClickListener(onClick);
         news.setOnClickListener(onClick);
         pre.setOnClickListener(onClick);
     }
 
     private class OnClick implements View.OnClickListener{
-
+        //Switch to different activities by clicking on different buttons on the home page by using class intent.
         @Override
         public void onClick(View v) {
             Intent intent = null;

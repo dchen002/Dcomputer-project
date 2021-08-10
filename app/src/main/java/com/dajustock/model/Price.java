@@ -8,6 +8,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+//Customize the Price data structure,Price data consists of Day 1 prices and Day 2 prices.
 public class Price {
     private double closePrice;
     private double nextDayClosePrice;

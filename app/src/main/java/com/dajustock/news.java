@@ -25,6 +25,7 @@ public class news extends Activity {
                 mWebView.loadUrl("javascript:function hide(){document.getElementsByClassName(\"banner clickable\")[0].style.display=\"none\";}hide();");
             }
         });
+        //load Url that we needed.
         mWebView.loadUrl("https://uk.investing.com/");
     }
 

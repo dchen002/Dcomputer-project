@@ -15,14 +15,16 @@ public class ChartSearch extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        //Make this page accessible to the network without any problems.
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        // Do something in response to button
+        // Click on the button to switch to the DisplayChart page.
         Intent intent = new Intent(this, DisplayChart.class);
+        //Reads and saves the information entered by the user..
         EditText editText = (EditText) findViewById(R.id.editTextTextPersonName);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);

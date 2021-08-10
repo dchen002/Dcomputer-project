@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.dajustock.stockchart.R;
 
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
-    //声明控件
+    //declare buttons need to use in this page
     private Button mybutlogin;
     private EditText mETUser;
     private EditText mETpassword;
@@ -22,43 +22,33 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        //找控件
+        //find buttons in xml files by using findViewById.
         mybutlogin  = findViewById(R.id.btn_login);
         mETUser = findViewById(R.id.et_1);
         mETpassword = findViewById(R.id.et_2);
 
 
-        //直接跳转-方法1
-//        mybutlogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent Intent=null;
-//                Intent = new Intent(MainActivity.this,FunctionActivity.class);
-//                startActivity(Intent);
-//
-//            }
-//        });
         mybutlogin.setOnClickListener(this);
     }
     public void onClick(View v){
-        //获取用户输入
+        //get user input content.
         String username = mETUser.getText().toString();
         String password = mETpassword.getText().toString();
-        //弹出内容
-        String ok = "登陆成功";
-        String fail="登陆失败";
+        //Shows successful login if username and password are correct
+        String ok = "Login successful";
+        //Show login failure if username and password are incorrect
+        String fail="Login failed";
         Intent intent = null;
-        //判断用户名密码是否正确
+        //Determine if the username and password are correct
         if(username.equals("123")&&password.equals("123")){
-            //toast普通
+
             Toast.makeText(getApplicationContext(),ok,Toast.LENGTH_SHORT).show();
-            //如果正确跳转
+            //if username and password are incorrect go to main page
             intent = new Intent(MainActivity2.this, mainpage.class);
             startActivity(intent);
 
         }else{
-            //不正确
-            //Toast升级版
+            //Show login failure if username and password are incorrect
             Toast toastCenter = Toast.makeText(getApplicationContext(),fail,Toast.LENGTH_SHORT);
             toastCenter.setGravity(Gravity.CENTER,0,0);
             toastCenter.show();
